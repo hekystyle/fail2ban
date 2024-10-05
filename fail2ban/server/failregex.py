@@ -35,7 +35,7 @@ R_HOST = [
 		# separated ipv4:
 		r"""(?:::f{4,6}:)?(?P<ip4>%s)""" % (IPAddr.IP_4_RE,),
 		# separated ipv6:
-		r"""(?P<ip6>%s)""" % (IPAddr.IP_6_RE,),
+		r"""(?P<ip6>%s)(?:%%\w+)?""" % (IPAddr.IP_6_RE),
 		# separated dns:
 		r"""(?P<dns>[\w\-.^_]*\w)""",
 		# place-holder for ADDR tag-replacement (joined):
