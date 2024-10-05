@@ -1312,7 +1312,7 @@ def get_monitor_failures_testcase(Filter_):
 		def test_move_into_file_after_removed(self):
 			# exactly as above test + remove file explicitly
 			# to test against possible drop-out of the file from monitoring
-		    self._test_move_into_file(interim_kill=True)
+			self._test_move_into_file(interim_kill=True)
 
 		def test_new_bogus_file(self):
 			# to make sure that watching whole directory does not effect
