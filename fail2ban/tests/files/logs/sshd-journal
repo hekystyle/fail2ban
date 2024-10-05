@@ -11,6 +11,8 @@ srv sshd[13709]: error: PAM: Authentication failure for myhlj1374 from 192.030.0
 srv sshd[28732]: error: PAM: Authentication failure for stefanor from example.com
 # failJSON: { "match": true , "host": "2001:db8::80da:af6b:8b2c" }
 srv sshd[28732]: error: PAM: Authentication failure for test-ipv6 from 2001:db8::80da:af6b:8b2c
+# failJSON: { "match": true , "host": "fe80::f34:28f:8420:13f6" }
+srv sshd[28732]: error: PAM: Authentication failure for test-ipv6 from fe80::f34:28f:8420:13f6%wlan0
 
 #2
 # failJSON: { "match": true , "host": "194.117.26.69" }
@@ -23,6 +25,10 @@ srv sshd[31602]: Failed password for invalid user ROOT from 194.117.26.70 port 1
 srv sshd[31603]: Failed password for invalid user ROOT from aaaa:bbbb:cccc:1234::1:1 port 12345
 # failJSON: { "match": true , "host": "aaaa:bbbb:cccc:1234::1:1" }
 srv sshd[31603]: Failed password for invalid user ROOT from aaaa:bbbb:cccc:1234::1:1
+# failJSON: { "match": true , "host": "fe80::f34:28f:8420:13f6" }
+srv sshd[31603]: Failed password for invalid user ROOT from fe80::f34:28f:8420:13f6%wlan0 port 12345
+# failJSON: { "match": true , "host": "fe80::f34:28f:8420:13f6" }
+srv sshd[31603]: Failed password for invalid user ROOT from fe80::f34:28f:8420:13f6%wlan0
 
 #3
 # failJSON: { "match": true , "host": "1.2.3.4" }
@@ -31,6 +37,8 @@ srv sshd[1643]: ROOT LOGIN REFUSED FROM 1.2.3.4
 srv sshd[1643]: ROOT LOGIN REFUSED FROM 1.2.3.4 port 12345 [preauth]
 # failJSON: { "match": true , "host": "1.2.3.4" }
 srv sshd[1643]: ROOT LOGIN REFUSED FROM ::ffff:1.2.3.4
+# failJSON: { "match": true , "host": "fe80::f34:28f:8420:13f6" }
+srv sshd[1643]: ROOT LOGIN REFUSED FROM fe80::f34:28f:8420:13f6%wlan0
 
 #4
 # failJSON: { "match": true , "host": "192.0.2.1", "desc": "Invalid user" }
